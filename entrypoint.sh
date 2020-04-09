@@ -15,7 +15,7 @@ mkdir $HOME/.docker
 echo $INPUT_CONFIG > $HOME/.docker/config.json
 
 # Runs ko:
-output=$(KO_DOCKER_REPO="$INPUT_REPO" $GOPATH/bin/ko resolve -f $INPUT_FILENAME)
+output=$(KO_DOCKER_REPO="$INPUT_REPO" ko resolve -f $INPUT_FILENAME)
 status="$?"
 
 # Sets the output variable for Github Action API:
