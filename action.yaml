@@ -1,0 +1,14 @@
+name: 'ko-resolve'
+description: 'Use ko to do something.'
+inputs:
+  filename:
+    description: 'Filename, directory, or URL to files to use to create the resource'
+    required: true
+
+outputs:
+  output:
+    description: 'The output of ko'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
