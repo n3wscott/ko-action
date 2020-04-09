@@ -9,8 +9,13 @@ echo
 
 # TODO: setup the docker config file.
 
+# TODO: gonna yolo this for now...
+
+mkdir $HOME/.docker
+echo $INPUT_CONFIG > $HOME/.docker/config.json
+
 # Runs ko:
-output=$(ko resolve -f $INPUT_FILENAME)
+output=$(KO_DOCKER_REPO="$INPUT_REPO" $GOPATH/bin/ko resolve -f $INPUT_FILENAME)
 status="$?"
 
 # Sets the output variable for Github Action API:
